@@ -27,7 +27,7 @@ private
     for i in 0..8   #traverse rows
       available_row_choices = number_set - board.row(i).to_a
       for j in 0..8 #traverse columns
-        unless board[i,j] != 0
+        if board[i,j] == 0
           available_col_choices = number_set - board.column(j).to_a
           available_pos_choices = available_row_choices &
                                   available_col_choices &
@@ -52,7 +52,7 @@ private
     block = get_block(board, position)
     number_set - block.to_a.flatten.select{|e| e != 0}
   end
-  
+
   def get_block(board, position)
     index_i = (position.first / 3) * 3
     index_j = (position.last / 3) * 3

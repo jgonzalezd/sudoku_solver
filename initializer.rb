@@ -1,5 +1,5 @@
 require './game'
-
+require 'byebug'
 
 @game = Game.new
 # Each '0' is a blank cell
@@ -13,3 +13,5 @@ require './game'
                  0, 0, 4, 0, 0, 0, 1, 0, 0,
                  0, 0, 3, 6, 9, 7, 5, 0, 0
 @game.solve
+byebug
+1+1

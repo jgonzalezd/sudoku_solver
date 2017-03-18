@@ -1,7 +1,7 @@
 require './game'
 require './game_board'
 
-describe GameBoard do  
+describe GameBoard do
   it "should correctly solve the board" do
     @game = Game.new
     # Each '0' is a blank cell
@@ -23,7 +23,6 @@ describe GameBoard do
                                   7, 6, 5, 2, 1, 4, 3, 9, 8,
                                   2, 9, 4, 5, 3, 8, 1, 7, 6,
                                   1, 8, 3, 6, 9, 7, 5, 4, 2
-
     @game.solve.should == @solved_board
   end
 
@@ -48,7 +47,7 @@ describe GameBoard do
                                   4, 9, 8, 7, 2, 3, 1, 5, 6,
                                   7, 1, 3, 6, 5, 4, 8, 2, 9,
                                   5, 6, 2, 8, 1, 9, 4, 7, 3
-                                  
+
     @game.solve.should == @solved_board
   end
 end
